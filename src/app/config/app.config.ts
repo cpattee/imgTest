@@ -21,5 +21,5 @@ export const AppConfig: IAppConfig = {
   topHeroesLimit: 4,
   topProjectsLimit: 4,
   snackBarDuration: 3000,
-  repositoryURL: 'https://github.com/Ismaestro/angular4-example-app'
+  repositoryURL: 'https://github.com/cpattee/imgTest'
 };
