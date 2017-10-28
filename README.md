@@ -4,21 +4,21 @@
 
 > ### Base project contains CRUD, official style guide, patterns, etc.
 
-![travis](https://travis-ci.org/Ismaestro/angular4-example-app.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/Ismaestro/angular4-example-app/badge.svg?branch=master)](https://coveralls.io/github/Ismaestro/angular4-example-app?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d190a60fc864060ac054ba17a4e92e4)](https://www.codacy.com/app/Ismaestro/angular4-example-app?utm_source=github.com&utm_medium=referral&utm_content=Ismaestro/angular4-example-app&utm_campaign=badger)
-[![Known Vulnerabilities](https://snyk.io/test/github/ismaestro/angular4-example-app/badge.svg)](https://snyk.io/test/github/ismaestro/angular4-example-app)
+![travis](https://travis-ci.org/cpattee/imgTest.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/cpattee/imgTest/badge.svg?branch=master)](https://coveralls.io/github/cpattee/imgTest?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d190a60fc864060ac054ba17a4e92e4)](https://www.codacy.com/app/cpattee/imgTest?utm_source=github.com&utm_medium=referral&utm_content=cpattee/imgTest&utm_campaign=badger)
+[![Known Vulnerabilities](https://snyk.io/test/github/cpattee/imgTest/badge.svg)](https://snyk.io/test/github/cpattee/imgTest)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-[![dependency Status](https://david-dm.org/ismaestro/angular4-example-app.svg)](https://david-dm.org/ismaestro/angular4-example-app#info=dependencies)
-[![devDependency Status](https://david-dm.org/ismaestro/angular4-example-app/dev-status.svg)](https://david-dm.org/ismaestro/angular4-example-app#info=devDependencies)
-[![peerDependencies Status](https://david-dm.org/ismaestro/angular4-example-app/peer-status.svg)](https://david-dm.org/ismaestro/angular4-example-app?type=peer)
+[![dependency Status](https://david-dm.org/cpattee/imgTest.svg)](https://david-dm.org/cpattee/imgTest#info=dependencies)
+[![devDependency Status](https://david-dm.org/cpattee/imgTest/dev-status.svg)](https://david-dm.org/cpattee/imgTest#info=devDependencies)
+[![peerDependencies Status](https://david-dm.org/cpattee/imgTest/peer-status.svg)](https://david-dm.org/cpattee/imgTest?type=peer)
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](http://angularexampleapp.com/)
-[![Join the chat at https://gitter.im/angular4-example-app/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular4-example-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/imgTest/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/imgTest/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![GitHub forks](https://img.shields.io/github/forks/ismaestro/angular4-example-app.svg?style=social&label=Fork)](https://github.com/ismaestro/angular4-example-app/fork)
-[![GitHub stars](https://img.shields.io/github/stars/ismaestro/angular4-example-app.svg?style=social&label=Star)](https://github.com/ismaestro/angular4-example-app)
+[![GitHub forks](https://img.shields.io/github/forks/cpattee/imgTest.svg?style=social&label=Fork)](https://github.com/cpattee/imgTest/fork)
+[![GitHub stars](https://img.shields.io/github/stars/cpattee/imgTest.svg?style=social&label=Star)](https://github.com/cpattee/imgTest)
 
 ### DEMO
 
