@@ -1,0 +1,22 @@
+<h1 class="section-title">{{'projectDetail' | translate}}</h1>
+<mat-progress-spinner *ngIf="!project" class="progress-spinner" [color]="'primary'" [mode]="'indeterminate'">
+</mat-progress-spinner>
+<div id="project-detail" *ngIf="project">
+  {{project}}
+  <ng-container>
+    <mat-card class="project-card">
+      <mat-card-header>
+        <div mat-card-avatar class="project-header-image" [ngStyle]="{'background-image': 'url(assets/images/projects/' + project.id + '-thumbnail.jpg)'}"></div>
+        <mat-card-title>{{project.name}}</mat-card-title>
+        <mat-card-subtitle>{{project.category}}</mat-card-subtitle>
+        <div class="flex-spacer"></div>
+        <div class="project-actions">
+          {{project.likes}}
+          <mat-icon matTooltip="{{(canVote ? 'canVote' : 'cannotVote') | translate}}" [matTooltipPosition]="'above'" class="like-icon" (click)="like(project)">favorite
+          </mat-icon>
+        </div>
+      </mat-card-header>
+      <img mat-card-image src="assets/images/projects/{{project.id}}.jpg">
+    </mat-card>
+  </ng-container>
+</div>

@@ -1,0 +1,38 @@
+[{
+  "id": "1",
+  "name": "This Test Project",
+  "featured": true,
+  "active": true,
+  "category": "UX",
+  "company": null,
+  "client": null,
+  "desc": "UX project with Angular 2, and Sass",
+  "techs": [{
+      "name": "Angular",
+      "logo": "../../../assets/img/svg/skills/angular.svg"
+    },
+    {
+      "name": "Sass",
+      "logo": "../../../assets/img/svg/skills/sass.svg"
+    },
+    {
+      "name": "Gulp",
+      "logo": "../../../assets/img/svg/skills/gulp.svg"
+    },
+    {
+      "name": "Illustrator",
+      "logo": "../../../assets/img/svg/skills/illustrator.svg"
+    },
+    {
+      "name": "Photoshop",
+      "logo": "../../../assets/img/svg/skills/photoshop.svg"
+    }
+  ],
+  "images": [""],
+  "dates": {
+    "start": "2014-12-09",
+    "end": ""
+  },
+  "url": "http://www.chelseapattee.com/",
+  "github": "https://github.com/cpattee/angular2-portfolio"
+}]
