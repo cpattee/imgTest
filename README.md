@@ -95,6 +95,6 @@ Thanks to all contributors and their support!
 
 ## License
 
-MIT
+MIT 
 
 Weeeeeeee :rainbow:
