@@ -1,31 +1,130 @@
-<div id="left">
-  <h2 class="section-title">{{ 'projectsList' | translate }}</h2>
-  <div>
-    <mat-progress-spinner *ngIf="!projects" class="progress-spinner" [color]="'primary'" [mode]="'indeterminate'">
-    </mat-progress-spinner>
-    <mat-list>
-      <mat-list-item *ngFor="let project of projects">
-        <img class="cp" (click)="seeProjectDetails(project);" mat-list-avatar src="assets/images/heroes/4-thumbnail.jpg">
-        <img *ngIf="!project.default && project.url != null" class="cp" (click)="seeProjectDetails(project);" mat-list-avatar src="{{project.url}}">
-        <img *ngIf="project.url == null" (click)="seeProjectDetails(project);" mat-list-avatar src="assets/images/heroes/4-thumbnail.jpg">
-        <h3 mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);"> {{project.name}} </h3>
-        <p mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);">
-          <span>{{project.alterEgo}}</span>
-        </p>
-        <div class="project-actions">
-          {{project.likes}}
-          <mat-icon matTooltip="{{(canVote ? 'canVote' : 'cannotVote') | translate}}" [matTooltipPosition]="'above'" class="like-icon" (click)="like(project)">
-            favorite
-          </mat-icon>
-          <mat-icon class="remove-icon" *ngIf="!project.default" (click)="remove(project);">
-            delete
-          </mat-icon>
-        </div>
-      </mat-list-item>
-    </mat-list>
+<section id="main">
+  <div id="content" class="collection">
+    <section id="collection">
+      <ul class="projects-list">
+        <li>
+          <!-- <a href="http://relampago.co/burgerzord/" style="background-image: url('http://relampago.co/wp-content/uploads/relampago_burgerzord-01-banner-1.jpg');" name="Burgerzord" ajax> -->
+          <a href="http://relampago.co/burgerzord/" style="background-image: url('assets/images/projects/4-thumbnail.jpg');" name="Blah" ajax>
+            <img class="hover" src="http://relampago.co/wp-content/uploads/portfolio_relampago_burgerzord-1.gif" />
+            <div class="box">
+              <div class="title">project name</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://relampago.co/fffriday/double-trouble/" style="background-image: url('assets/images/projects/5-thumbnail.jpg');" name="Double Trouble" ajax>
+            <img class="hover" src="http://relampago.co/wp-content/uploads/relampago_dt_thumb.gif" />
+            <div class="box">
+              <div class="title">Stuff and Stuff</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://relampago.co/fffriday/double-trouble/" style="background-image: url('assets/images/projects/3-thumbnail.jpg');" name="Double Trouble" ajax>
+            <img class="hover" src="http://relampago.co/wp-content/uploads/relampago_dt_thumb.gif" />
+            <div class="box">
+              <div class="title">Double Trouble</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
   </div>
+</section>
+<!-- <div class="bounds">
+    <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+      <div fxFlex="33" class="sec1">
+        first-section
+      </div>
+      <div fxFlex="33" class="sec2">
+        second-section
+      </div>
+      <div fxFlex="33" class="sec3">
+        third-section
+      </div>
+    </div>
+  </div> -->
+<div fxLayout='column' class="zero" style="background: black;">
+
+  <div fxFlex="33" [fxFlex.md]="box1Width" class="one" style="background: red;">
+    <h1>CLASS ONE</h1>
+  </div>
+  <div fxFlex="33" [fxLayout]="direction" fxLayout.md="row" class="two" style="background: purple;">
+
+    <div fxFlex="22" fxFlex.md="10px" fxHide.lg class="two_one">CLASS TWO BOX ONE</div>
+    <div fxFlex="205px" fxFlex.md="65" class="two_two">CLASS TWO BOX TWO</div>
+    <div fxFlex="30px" fxFlex.md="25" fxShow [fxHide.md]="hideBox" class="two_three">CLASS TWO BOX THREE</div>
+
+  </div>
+  <div fxFlex class="three"> CLASS THREE</div>
+
 </div>
-<div id="right">
+
+<section id="main">
+  <div id="content" class="collection">
+    <section id="collection">
+      <!-- <div id="left"> -->
+      <h2 class="section-title">{{ 'projectsList' | translate }}</h2>
+      <div>
+        <mat-progress-spinner *ngIf="!projects" class="progress-spinner" [color]="'primary'" [mode]="'indeterminate'">
+        </mat-progress-spinner>
+        <ul class="projects-list">
+          <li *ngFor="let project of projects">
+            <!-- <h3>url(${{project.id}})</h3>
+            <div [ngStyle]="{'background-image': 'url(assets/images/heroes/' + project.id + '-thumbnail.jpg)'}"></div> -->
+
+            <!-- <div[ngStyle]="{'background-image': 'url(' + project.id' + '-thumbnail.jpg')'}"> -->
+            <!-- <div [ngStyle]="{'background-image: url(assets/images/heroes/${{project.id}}-thumbnail.jpg)'}"> -->
+            <!-- <div [ngStyle]="{'background-image': 'url(assets/images/heroes/' + project.id + '-thumbnail.jpg)'}"> -->
+            <div>
+              <img class="initial" src="assets/images/heroes/{{project.id}}-thumbnail.jpg" style="background-size: cover; display: block; width: 100%;">
+              <img class="hover" (click)="seeProjectDetails(project);" src="assets/images/projects/{{project.id}}-hover.gif">
+              <img *ngIf="!project.default && project.url != null" class="hover" (click)="seeProjectDetails(project);" mat-list-avatar src="{{project.url}}">
+              <img class="hover" *ngIf="project.url == null" (click)="seeProjectDetails(project);" src="assets/images/heroes/4-thumbnail.jpg">
+              <div class="box">
+                <div class="title">{{project.name}}</div>
+              </div>
+              <!-- <h3 mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);"> {{project.name}} </h3>
+              <p mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);">
+                <span>{{project.alterEgo}}</span>
+              </p> -->
+              <!-- <div class="project-actions">
+                {{project.likes}}
+                <mat-icon matTooltip="{{(canVote ? 'canVote' : 'cannotVote') | translate}}" [matTooltipPosition]="'above'" class="like-icon" (click)="like(project)">
+                  favorite
+                </mat-icon>
+                <mat-icon class="remove-icon" *ngIf="!project.default" (click)="remove(project);">
+                  delete
+                </mat-icon>
+              </div> -->
+            </div>
+          </li>
+        </ul>
+        <!-- <mat-list class="projects-list">
+          <mat-list-item *ngFor="let project of projects">
+            <img class="cp" (click)="seeProjectDetails(project);" mat-list-avatar src="assets/images/heroes/4-thumbnail.jpg">
+            <img *ngIf="!project.default && project.url != null" class="cp" (click)="seeProjectDetails(project);" mat-list-avatar src="{{project.url}}">
+            <img *ngIf="project.url == null" (click)="seeProjectDetails(project);" mat-list-avatar src="assets/images/heroes/4-thumbnail.jpg">
+            <h3 mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);"> {{project.name}} </h3>
+            <p mat-line [ngClass]="{'cp': project.default}" (click)="seeProjectDetails(project);">
+              <span>{{project.alterEgo}}</span>
+            </p>
+            <div class="project-actions">
+              {{project.likes}}
+              <mat-icon matTooltip="{{(canVote ? 'canVote' : 'cannotVote') | translate}}" [matTooltipPosition]="'above'" class="like-icon" (click)="like(project)">
+                favorite
+              </mat-icon>
+              <mat-icon class="remove-icon" *ngIf="!project.default" (click)="remove(project);">
+                delete
+              </mat-icon>
+            </div>
+          </mat-list-item>
+        </mat-list> -->
+      </div>
+    </section>
+  </div>
+</section>
+<!-- <div id="right">
   <h2 class="section-title">{{ 'createProject' | translate }}</h2>
   <div>
     <form [formGroup]="newProjectForm" #form="ngForm" (ngSubmit)="createNewProject(newProjectForm.value)">
@@ -44,5 +143,5 @@
       <div *ngIf="error">{{error | translate}}</div>
     </form>
   </div>
-</div>
+</div> -->
 <div class="clear"></div>

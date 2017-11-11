@@ -37,6 +37,7 @@ describe('AppComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
     component = fixture.debugElement.componentInstance;
   }));
 
@@ -45,15 +46,8 @@ describe('AppComponent', () => {
   }));
 
   it('should change title meta tag in root path', async(() => {
-    component.router.navigate(['/']).then(() => {
+    fixture.detectChanges();
       expect(component.title.getTitle()).toBe('Angular Example App');
-    });
-  }));
-
-  it('should change title meta tag in heroes path', async(() => {
-    component.router.navigate(['/' + AppConfig.routes.heroes]).then(() => {
-      expect(component.title.getTitle()).toBe('Heroes list');
-    });
   }));
 
   it('should check browser features', (() => {

@@ -10,12 +10,15 @@ import {CoreModule} from './core/core.module';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpLoaderFactory} from './app.translate.factory';
 import {HeroTopComponent} from './heroes/hero-top/hero-top.component';
 import {ProjectTopComponent} from './projects/project-top/project-top.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ProgressBarService} from './core/progress-bar.service';
+import {ProgressInterceptor} from './shared/interceptors/progress.interceptor';
+import {TimingInterceptor} from './shared/interceptors/timing.interceptor';
 
 @NgModule({
   imports: [
@@ -40,7 +43,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     ProjectTopComponent
   ],
   providers: [
-    {provide: APP_CONFIG, useValue: AppConfig}
+    {provide: APP_CONFIG, useValue: AppConfig},
+    {provide: HTTP_INTERCEPTORS, useClass: ProgressInterceptor, multi: true, deps: [ProgressBarService]},
+    {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

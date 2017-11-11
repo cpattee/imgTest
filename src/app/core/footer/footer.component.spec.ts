@@ -19,7 +19,8 @@ describe('FooterComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);
-    component = fixture.debugElement.componentInstance;
+    fixture.detectChanges();
+   component = fixture.debugElement.componentInstance;
   }));
 
   it('should create footer component', (() => {
